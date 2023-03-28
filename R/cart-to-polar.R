@@ -13,6 +13,7 @@
 #' # Convert the complex number, z = 1 + 6i to polar form.
 #' cart_to_polar(1, 6)
 #'
+#' @export
 
 
 cart_to_polar <- function(real, imaginary) {
