@@ -29,6 +29,6 @@ These functions combine other intermediary functions like `cart_to_polar()` and
 Use this code to download the development version of `complexR`.
 
 ```{r}
-# devtools::install_github("Swaha294/complexR")
+devtools::install_github("Swaha294/complexR")
 ```
 
