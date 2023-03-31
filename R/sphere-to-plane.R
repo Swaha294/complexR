@@ -12,12 +12,12 @@
 #'
 #' # Convert the point (0.5, 0.5, 0.5) on the Riemann sphere to a point on the complex plane
 #'
-#' stereo_proj1(0.5, 0.5, 0.5)
+#' sphere_to_plane(0.5, 0.5, 0.5)
 #'
 #' @export
 
 # add part for north pole
-stereo_proj1 <- function(x, y, z) {
+sphere_to_plane <- function(x, y, z) {
 
   if (!is.numeric(x) | !is.numeric(y) | !is.numeric(z)) {
 

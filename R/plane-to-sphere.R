@@ -13,12 +13,12 @@
 #'
 #' # Convert the complex number z = 1 + 3i to a point on the Riemann sphere
 #'
-#' stereo_proj2(1, 3)
+#' plane_to_sphere(1, 3)
 #'
 #' @export
 
 
-stereo_proj2 <- function(a, b) {
+plane_to_sphere <- function(a, b) {
 
   # checking that a and b are numbers
   if (!is.numeric(a) | !is.numeric(b)) {
