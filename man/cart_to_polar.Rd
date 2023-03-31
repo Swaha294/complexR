@@ -12,7 +12,7 @@ cart_to_polar(real, imaginary)
 \item{imaginary}{A numeric vector, the imaginary part of the complex number}
 }
 \value{
-A list with two elements, `r` and `theta`, which correspond to the polar
+A list with two elements, \code{r} and \code{theta}, which correspond to the polar
 components of the complex number given in Cartesian coordinates.
 }
 \description{

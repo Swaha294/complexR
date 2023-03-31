@@ -14,7 +14,7 @@ sphere_to_plane(x, y, z)
 \item{z}{A numeric vector.}
 }
 \value{
-The complex number `w` obtained from the projection of the input to the complex plane.
+The complex number \code{w} obtained from the projection of the input to the complex plane.
 }
 \description{
 Perform a stereographic projection to project a point on the Riemann sphere to the complex plane

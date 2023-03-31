@@ -13,7 +13,7 @@ polar_to_cart(r, theta)
 0 and 2pi.}
 }
 \value{
-A list with two elements, `x` and `y`, which correspond to the Cartesian
+A list with two elements, \code{x} and \code{y}, which correspond to the Cartesian
 components of the complex number given in polar coordinates.
 }
 \description{
