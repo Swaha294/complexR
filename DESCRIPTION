@@ -14,5 +14,8 @@ Depends:
 Imports:
     dplyr,
     magrittr,
+    ggpubr,
+    ggplot2,
+    purrr,
     utils,
     vctrs
