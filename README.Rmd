@@ -32,3 +32,15 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
+
+## Usage
+
+Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle centered at (1, 0)
+
+```{r}
+library(complexR)
+circle_transform(x0 = 1, x_new = expression(2*x*y), y_new = expression(y^2))
+```
+
+
+

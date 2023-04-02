@@ -35,7 +35,7 @@ devtools::install_github("Swaha294/complexR")
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpPWP3l5/remotes12dce2520d1a4/Swaha294-complexR-81d4a36/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpPWP3l5/remotes12dce2520d1a4/Swaha294-complexR-81d4a36/DESCRIPTION’ (342ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpmBukfh/remotes6abc42a5bc39/Swaha294-complexR-2971744/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpmBukfh/remotes6abc42a5bc39/Swaha294-complexR-2971744/DESCRIPTION’
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
@@ -43,3 +43,15 @@ devtools::install_github("Swaha294/complexR")
     ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
     ##      
     ## 
+
+## Usage
+
+Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle
+centered at (1, 0)
+
+``` r
+library(complexR)
+circle_transform(x0 = 1, x_new = expression(2*x*y), y_new = expression(y^2))
+```
+
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
