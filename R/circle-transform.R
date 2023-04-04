@@ -96,14 +96,14 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         all_real = c(
           all_real,
           readr::parse_number(
-            str_split(i, "\\+")[[1]][1]
+            stringr::str_split(i, "\\+")[[1]][1]
           )
         )
 
         all_imaginary = c(
           all_imaginary,
           readr::parse_number(
-            str_split(i, "\\+")[[1]][2]
+            stringr::str_split(i, "\\+")[[1]][2]
           )
         )
 
@@ -129,7 +129,7 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         x = all_real,
         y = all_imaginary
       ) %>%
-        mutate(
+        dplyr::mutate(
           x_new = eval(x_new, list(x = x, y = y)),
           y_new = eval(y_new, list(x = x, y = y)),
           exp = paste0("(", x, ", ", y, ")"),

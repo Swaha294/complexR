@@ -43,7 +43,7 @@ circle_transform(
   x0 = 1, 
   x_new = expression(2*x*y), 
   y_new = expression(y^2),
-  annotations = c(complex(real = 1, imaginary = 0), complex(real = 0.6, imaginary = 0.8))
+  annotations = c(complex(real = 2, imaginary = 0), complex(real = 1, imaginary = 1))
   )
 ```
 
