@@ -40,6 +40,7 @@
 #'
 #' @importFrom magrittr "%>%"
 #' @import ggplot2
+#' @importFrom stringr "str_split"
 
 
 # creating function to perform any simple transformation on a circle
