@@ -17,6 +17,8 @@
 #' @param theta_max A numeric vector. The upper bound of the \eqn{\theta} corresponding
 #' to the part of the circle that is part of the domain. The default value is set
 #' to \eqn{2 \pi}.
+#' @param annotations A list of complex numbers. An optional list of complex numbers
+#' you want to visualize.
 #'
 #' @return A visualization with the domain and the image obtained from the
 #' transformation on all points of the domain.
@@ -42,7 +44,8 @@
 
 # creating function to perform any simple transformation on a circle
 circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2),
-                             y_new = expression(2*x*y), theta_min = 0, theta_max = 2*pi) {
+                             y_new = expression(2*x*y), theta_min = 0, theta_max = 2*pi,
+                             annotations = NULL) {
 
   if (!is.numeric(r) | !is.numeric(x0) | !is.numeric(y0) | !is.numeric(theta_min) |
       !is.numeric(theta_max)) {
@@ -63,6 +66,9 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
     # checking that x_new and y_new are expressions
     stop("Check input: x_new and y_new should be objects of class 'expression'", call. = FALSE)
+  } else if (!is.null(annotations) & !is.complex(annotations)) {
+    # checking that annotations is a list of complex numbers
+    stope("Check input: annotations should be a list of complex numbers", call. = FALSE)
   } else {
 
     # creating data set with theta between theta_min and theta_max
@@ -72,11 +78,66 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
     my_circle = purrr::map2_df(r, thetas, polar_to_cart)
 
     # adjusting for center at (x0, y0)
-    my_circle <- my_circle %>%
+    my_circle = my_circle %>%
       dplyr::mutate(
         x = x + x0,
         y = y + y0
       )
+
+    # adding annotations if given
+
+    if (!is.null(annotations)) {
+
+      all_real = c()
+      all_imaginary = c()
+
+      for (i in annotations) {
+
+        all_real = c(
+          all_real,
+          readr::parse_number(
+            str_split(i, "\\+")[[1]][1]
+          )
+        )
+
+        all_imaginary = c(
+          all_imaginary,
+          readr::parse_number(
+            str_split(i, "\\+")[[1]][2]
+          )
+        )
+
+      }
+
+      # checking that all annotations are on the circle
+      n = 1
+
+      while (n <= length(all_real)) {
+
+        x = all_real[n]
+        y = all_imaginary[n]
+
+        if ((x - x0)^2 + (y - y0)^2 == r^2) {
+          n = n + 1
+        } else {
+          stop("Check input: All annotations should lie on the given circle", call. = FALSE)
+        }
+
+      }
+
+      my_points = data.frame(
+        x = all_real,
+        y = all_imaginary
+      ) %>%
+        mutate(
+          x_new = eval(x_new, list(x = x, y = y)),
+          y_new = eval(y_new, list(x = x, y = y)),
+          exp = paste0("(", x, ", ", y, ")"),
+          exp_f = paste0("f(", x, ", ", y, ")")
+        )
+
+    }
+
 
     # creating visualization of domain circle
     domain = ggplot(
@@ -93,6 +154,23 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         y = "Im z",
         title = "Domain"
       )
+
+    # adding annotations if given
+    if (!is.null(annotations)) {
+
+      domain = domain +
+        geom_point(
+          data = my_points,
+          mapping = aes(x = x, y = y),
+          size = 2.5,
+          color = "orchid2"
+        ) +
+        ggrepel::geom_label_repel(
+          data = my_points,
+          mapping = aes(label = exp)
+        )
+
+    }
 
     # creating new data set with transformation
     my_circle = my_circle %>%
@@ -117,16 +195,29 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         title = "Image"
       )
 
+    # adding annotations if given
+    if (!is.null(annotations)) {
+
+      image = image +
+        geom_point(
+          data = my_points,
+          mapping = aes(x = x_new, y = y_new),
+          size = 2.5,
+          color = "orchid2"
+        ) +
+        ggrepel::geom_label_repel(
+          data = my_points,
+          mapping = aes(label = exp_f)
+        )
+
+    }
+
     # creating visualization with domain and image
     ggpubr::ggarrange(domain, image)
-
 
     }
 
 }
-
-
-
 
 
 

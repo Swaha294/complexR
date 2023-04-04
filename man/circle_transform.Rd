@@ -11,7 +11,8 @@ circle_transform(
   x_new = expression(x^2 - y^2),
   y_new = expression(2 * x * y),
   theta_min = 0,
-  theta_max = 2 * pi
+  theta_max = 2 * pi,
+  annotations = NULL
 )
 }
 \arguments{
@@ -38,6 +39,9 @@ set to \eqn{0}.}
 \item{theta_max}{A numeric vector. The upper bound of the \eqn{\theta} corresponding
 to the part of the circle that is part of the domain. The default value is set
 to \eqn{2 \pi}.}
+
+\item{annotations}{A list of complex numbers. An optional list of complex numbers
+you want to visualize.}
 }
 \value{
 A visualization with the domain and the image obtained from the
