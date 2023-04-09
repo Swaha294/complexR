@@ -69,7 +69,7 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
     stop("Check input: x_new and y_new should be objects of class 'expression'", call. = FALSE)
   } else if (!is.null(annotations) & !is.complex(annotations)) {
     # checking that annotations is a list of complex numbers
-    stope("Check input: annotations should be a list of complex numbers", call. = FALSE)
+    stop("Check input: annotations should be a list of complex numbers", call. = FALSE)
   } else {
 
     # creating data set with theta between theta_min and theta_max
