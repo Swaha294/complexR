@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 .Rproj.user
-README_files/*
+/README_files/*
 README.Rmd
