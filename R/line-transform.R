@@ -123,8 +123,7 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
       } else {
 
         n = my_points %>%
-          dplyr::mutate("y_hat" = m*x + c) %>%
-          filter(y_hat != y) %>%
+          dplyr::filter(y != m*x + c) %>%
           nrow()
 
           if (n != 0) {
