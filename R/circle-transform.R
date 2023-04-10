@@ -96,16 +96,12 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
 
         all_real = c(
           all_real,
-          readr::parse_number(
-            stringr::str_split(i, "\\+")[[1]][1]
-          )
+          Re(i)
         )
 
         all_imaginary = c(
           all_imaginary,
-          readr::parse_number(
-            stringr::str_split(i, "\\+")[[1]][2]
-          )
+          Im(i)
         )
 
       }

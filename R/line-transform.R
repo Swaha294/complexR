@@ -83,16 +83,12 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
 
         all_real = c(
           all_real,
-          readr::parse_number(
-            stringr::str_split(i, "\\+")[[1]][1]
-          )
+          Re(i)
         )
 
         all_imaginary = c(
           all_imaginary,
-          readr::parse_number(
-            stringr::str_split(i, "\\+")[[1]][2]
-          )
+          Im(i)
         )
 
       }
@@ -126,18 +122,16 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
 
       } else {
 
-        for (i in 1:length(annotations)) {
+        n = my_points %>%
+          dplyr::mutate("y_hat" = m*x + c) %>%
+          filter(y_hat != y) %>%
+          nrow()
 
-          my_x = my_points$x[i]
-          my_y = my_points$y[i]
-
-          if (my_y != (m*my_x + c)) {
+          if (n != 0) {
             stop("Check input: not all annotations are on the given line", call. = FALSE)
           }
 
         }
-
-      }
 
       my_points = my_points %>%
         dplyr::mutate(
