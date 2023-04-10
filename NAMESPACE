@@ -2,6 +2,7 @@
 
 export(cart_to_polar)
 export(circle_transform)
+export(line_transform)
 export(plane_to_sphere)
 export(polar_to_cart)
 export(sphere_to_plane)
