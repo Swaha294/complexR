@@ -34,14 +34,8 @@ devtools::install_github("Swaha294/complexR")
 
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
-    ## quantreg (5.94 -> 5.95) [CRAN]
-
-    ## Installing 1 packages: quantreg
-
     ## 
-    ## The downloaded binary packages are in
-    ##  /var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T//RtmpotT2RO/downloaded_packages
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpotT2RO/remotes3a676a359588/Swaha294-complexR-0812ed0/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpotT2RO/remotes3a676a359588/Swaha294-complexR-0812ed0/DESCRIPTION’ (396ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpu2lrpk/remotes3c3560355582/Swaha294-complexR-1ee9488/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpu2lrpk/remotes3c3560355582/Swaha294-complexR-1ee9488/DESCRIPTION’
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
