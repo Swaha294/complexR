@@ -35,7 +35,7 @@ devtools::install_github("Swaha294/complexR")
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpyAlFbo/remotes431d5c8b455d/Swaha294-complexR-fa64f4b/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpyAlFbo/remotes431d5c8b455d/Swaha294-complexR-fa64f4b/DESCRIPTION’ (393ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpx7Tza5/remotes640260d07c6b/Swaha294-complexR-5c3fdf2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpx7Tza5/remotes640260d07c6b/Swaha294-complexR-5c3fdf2/DESCRIPTION’
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
@@ -66,10 +66,11 @@ $y = 3x - 10$
 
 ``` r
 line_transform(
-  m = 3, 
+  m = 2, 
   c = -10,
   x_new = expression(x^2), 
-  y_new = expression(y^2 - x^2)
+  y_new = expression(y^2 - x^2),
+  annotations = c(complex(real = 0, imaginary = -10))
   )
 ```
 
