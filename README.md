@@ -28,6 +28,22 @@ can learn more about them in `vignette("complexR")`.
 
 Use this code to download the development version of `complexR`.
 
+``` r
+devtools::install_github("Swaha294/complexR")
+```
+
+    ## Downloading GitHub repo Swaha294/complexR@HEAD
+
+    ## 
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpphU44V/remotes3e4d70f25eb6/Swaha294-complexR-18a1ed2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpphU44V/remotes3e4d70f25eb6/Swaha294-complexR-18a1ed2/DESCRIPTION’ (335ms)
+    ##   ─  preparing ‘complexR’:
+    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
+    ##      
+    ## 
+
 ## Usage
 
 Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle
