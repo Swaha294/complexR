@@ -35,7 +35,7 @@ devtools::install_github("Swaha294/complexR")
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpVDLteu/remotes40e62773d0d9/Swaha294-complexR-e1146ef/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpVDLteu/remotes40e62773d0d9/Swaha294-complexR-e1146ef/DESCRIPTION’ (348ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpxXmGeQ/remotes423a20fef01a/Swaha294-complexR-aa0b049/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpxXmGeQ/remotes423a20fef01a/Swaha294-complexR-aa0b049/DESCRIPTION’ (357ms)
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
@@ -63,14 +63,3 @@ circle_transform(
 
 Visualize the transformation $f(z) = 2x^2 + i(y^2 - x^2)$ on the line
 $y = 3x - 10$
-
-``` r
-line_transform(
-  m = 3, 
-  c = -10,
-  x_new = expression(x^2), 
-  y_new = expression(y^2 - x^2)
-  )
-```
-
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
