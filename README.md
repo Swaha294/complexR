@@ -35,7 +35,7 @@ devtools::install_github("Swaha294/complexR")
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpphU44V/remotes3e4d70f25eb6/Swaha294-complexR-18a1ed2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpphU44V/remotes3e4d70f25eb6/Swaha294-complexR-18a1ed2/DESCRIPTION’ (335ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpVDLteu/remotes40e62773d0d9/Swaha294-complexR-e1146ef/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpVDLteu/remotes40e62773d0d9/Swaha294-complexR-e1146ef/DESCRIPTION’ (348ms)
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
