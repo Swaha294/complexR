@@ -14,7 +14,7 @@ line_transform(
 }
 \arguments{
 \item{m}{A numeric vector. The slope of the line, with default value set to \eqn{1}.
-Set to \eqn{\infinity} for horizontal line.}
+Set to \eqn{\infty} for horizontal line.}
 
 \item{c}{A numeric vector. The \eqn{y} intercept of the line, with default
 value set to \eqn{0}.}

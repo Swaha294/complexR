@@ -32,13 +32,28 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Skipping install of 'complexR' from a github remote, the SHA1 (bb26709d) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo Swaha294/complexR@HEAD
+
+    ## quantreg (5.94 -> 5.95) [CRAN]
+
+    ## Installing 1 packages: quantreg
+
+    ## 
+    ## The downloaded binary packages are in
+    ##  /var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T//RtmpotT2RO/downloaded_packages
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpotT2RO/remotes3a676a359588/Swaha294-complexR-0812ed0/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpotT2RO/remotes3a676a359588/Swaha294-complexR-0812ed0/DESCRIPTION’ (396ms)
+    ##   ─  preparing ‘complexR’:
+    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
+    ##      
+    ## 
 
 ## Usage
 
 Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle
-centered at (1, 0)
+centered at $(1, 0)$
 
 ``` r
 library(complexR)
@@ -51,3 +66,17 @@ circle_transform(
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+Visualize the transformation $f(z) = 2x^2 + i(y^2 - x^2)$ on the line
+$y = 3x - 10$
+
+``` r
+line_transform(
+  m = 3, 
+  c = -10,
+  x_new = expression(x^2), 
+  y_new = expression(y^2 - x^2)
+  )
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->

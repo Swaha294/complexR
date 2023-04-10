@@ -1,7 +1,7 @@
 #' Visualize transformations on straight lines in the complex plane
 #'
 #' @param m A numeric vector. The slope of the line, with default value set to \eqn{1}.
-#' Set to \eqn{\infinity} for horizontal line.
+#' Set to \eqn{\infty} for horizontal line.
 #' @param c A numeric vector. The \eqn{y} intercept of the line, with default
 #' value set to \eqn{0}.
 #' @param x_new An expression. The real part of the complex transformation with
@@ -85,7 +85,7 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
       )
 
     # creating new data set with transformation
-    my_line <- my_line %>%
+    my_line = my_line %>%
       dplyr::mutate(
         x_new = eval(x_new, list(x = x, y = y)),
         y_new = eval(y_new, list(x = x, y = y))

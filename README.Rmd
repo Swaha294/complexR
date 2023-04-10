@@ -35,7 +35,7 @@ devtools::install_github("Swaha294/complexR")
 
 ## Usage
 
-Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle centered at (1, 0)
+Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle centered at $(1, 0)$
 
 ```{r}
 library(complexR)
@@ -47,5 +47,15 @@ circle_transform(
   )
 ```
 
+Visualize the transformation $f(z) = 2x^2 + i(y^2 - x^2)$ on the line $y = 3x - 10$
+
+```{r}
+line_transform(
+  m = 3, 
+  c = -10,
+  x_new = expression(x^2), 
+  y_new = expression(y^2 - x^2)
+  )
+```
 
 
