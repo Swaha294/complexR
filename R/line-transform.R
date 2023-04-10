@@ -9,7 +9,7 @@
 #' @param y_new An expression. The imaginary part of the complex transformation
 #' with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.
 #' @param x_interecept A numeric vector. The \eqn{x}-intercept of the line when
-#' the line is parallel to the \eqn{x}-axis. Default value set to \eqn{1}.
+#' the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.
 #'
 #' @return A visualization with the domain and the image obtained from the
 #' transformation on all points of the domain.
@@ -28,7 +28,8 @@
 
 # write function for transformation of any line
 line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
-                           y_new = expression(2*x*y), xintercept = 1) {
+                           y_new = expression(2*x*y), xintercept = 1,
+                           annotations = NULL) {
 
   if (!is.numeric(m) | !is.numeric(c) & abs(m) != Inf | !is.numeric(xintercept)) {
     # checking that m and c are numbers
@@ -36,6 +37,9 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
     # checking that x_new and y_new are expressions
     stop("Check input: x_new and y_new should be objects of class 'expression'", call. = FALSE)
+  } else if (!is.null(annotations) & !is.complex(annotations)) {
+    # checking that annotations is a list of complex numbers
+    stop("Check input: annotations should be a list of complex numbers", call. = FALSE)
   } else {
 
     # checking whether slope m is infinity
@@ -69,6 +73,82 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
       y = my_y
     )
 
+    # creating data for annotations
+    if (!is.null(annotations)) {
+
+      all_real = c()
+      all_imaginary = c()
+
+      for (i in annotations) {
+
+        all_real = c(
+          all_real,
+          readr::parse_number(
+            stringr::str_split(i, "\\+")[[1]][1]
+          )
+        )
+
+        all_imaginary = c(
+          all_imaginary,
+          readr::parse_number(
+            stringr::str_split(i, "\\+")[[1]][2]
+          )
+        )
+
+      }
+
+      # creating data set of all annotations
+      my_points = data.frame(
+        "x" = all_real,
+        "y" = all_imaginary
+      )
+
+      # checking that annotations are on the line
+      if (abs(m) == Inf) {
+
+        n = my_points %>%
+          dplyr::filter(x != xintercept) %>%
+          nrow()
+
+        if (n != 0) {
+          stop("Check input: not all annotations are on the given line", call. = FALSE)
+        }
+
+      } else if (m == 0) {
+
+        n = my_points %>%
+          dplyr::filter(y != c) %>%
+          nrow()
+
+        if (n != 0) {
+          stop("Check input: not all annotations are on the given line", call. = FALSE)
+        }
+
+      } else {
+
+        for (i in 1:length(annotations)) {
+
+          my_x = my_points$x[i]
+          my_y = my_points$y[i]
+
+          if (my_y != (m*my_x + c)) {
+            stop("Check input: not all annotations are on the given line", call. = FALSE)
+          }
+
+        }
+
+      }
+
+      my_points = my_points %>%
+        dplyr::mutate(
+          x_new = eval(x_new, list(x = x, y = y)),
+          y_new = eval(y_new, list(x = x, y = y)),
+          exp = paste0("(", x, ", ", y, ")"),
+          exp_f = paste0("f(", x, ", ", y, ")")
+        )
+
+    }
+
     # getting image for domain
     domain = ggplot(
       data = my_line,
@@ -83,6 +163,23 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
         y = "Im z",
         title = "Domain"
       )
+
+    # adding annotations if given
+    if (!is.null(annotations)) {
+
+      domain = domain +
+        geom_point(
+          data = my_points,
+          mapping = aes(x = x, y = y),
+          size = 2.5,
+          color = "orchid2"
+        ) +
+        ggrepel::geom_label_repel(
+          data = my_points,
+          mapping = aes(label = exp)
+        )
+
+    }
 
     # creating new data set with transformation
     my_line = my_line %>%
@@ -105,6 +202,23 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
         y = "Im z",
         title = "Image"
       )
+
+    # adding annotations if given
+    if (!is.null(annotations)) {
+
+      image = image +
+        geom_point(
+          data = my_points,
+          mapping = aes(x = x_new, y = y_new),
+          size = 2.5,
+          color = "orchid2"
+        ) +
+        ggrepel::geom_label_repel(
+          data = my_points,
+          mapping = aes(label = exp_f)
+        )
+
+    }
 
     ggpubr::ggarrange(domain, image)
 

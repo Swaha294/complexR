@@ -9,7 +9,8 @@ line_transform(
   c = 0,
   x_new = expression(x^2 - y^2),
   y_new = expression(2 * x * y),
-  xintercept = 1
+  xintercept = 1,
+  annotations = NULL
 )
 }
 \arguments{
@@ -26,7 +27,7 @@ default set to \eqn{x^2 - y^2} corresponding to the \eqn{z^2} transformation.}
 with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.}
 
 \item{x_interecept}{A numeric vector. The \eqn{x}-intercept of the line when
-the line is parallel to the \eqn{x}-axis. Default value set to \eqn{1}.}
+the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.}
 }
 \value{
 A visualization with the domain and the image obtained from the
