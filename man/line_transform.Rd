@@ -26,7 +26,7 @@ default set to \eqn{x^2 - y^2} corresponding to the \eqn{z^2} transformation.}
 \item{y_new}{An expression. The imaginary part of the complex transformation
 with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.}
 
-\item{x_interecept}{A numeric vector. The \eqn{x}-intercept of the line when
+\item{xinterecept}{A numeric vector. The \eqn{x}-intercept of the line when
 the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.}
 }
 \value{

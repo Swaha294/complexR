@@ -8,7 +8,7 @@
 #' default set to \eqn{x^2 - y^2} corresponding to the \eqn{z^2} transformation.
 #' @param y_new An expression. The imaginary part of the complex transformation
 #' with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.
-#' @param x_interecept A numeric vector. The \eqn{x}-intercept of the line when
+#' @param xinterecept A numeric vector. The \eqn{x}-intercept of the line when
 #' the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.
 #'
 #' @return A visualization with the domain and the image obtained from the
@@ -46,21 +46,21 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
     if (abs(m) == Inf) {
 
       # setting all x to xintercept
-      my_x = rep(xintercept, 20000)
+      my_x = rep(xintercept, 50000)
       # getting all y
-      my_y = runif(20000, -5, 5)
+      my_y = runif(50000, -100, 100)
 
     } else if (m == 0) {
 
       # setting all y to c for horizontal line for m = 0
-      my_y = rep(c, 20000)
+      my_y = rep(c, 50000)
       # getting all x
-      my_x = runif(20000, -5, 5)
+      my_x = runif(50000, -100, 100)
 
     } else {
 
       # getting all y
-      my_y = runif(20000, c - 5, c + 5)
+      my_y = runif(50000, c - 100, c + 100)
       # getting all x
       my_x = (my_y - c) * m
 
