@@ -2,10 +2,10 @@
 
 export(cart_to_polar)
 export(circle_transform)
+export(disc_transform)
 export(line_transform)
 export(plane_to_sphere)
 export(polar_to_cart)
 export(sphere_to_plane)
 import(ggplot2)
 importFrom(magrittr,"%>%")
-importFrom(stringr,"str_split")

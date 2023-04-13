@@ -15,7 +15,7 @@ Imports:
     dplyr,
     magrittr,
     ggpubr,
-    stringr,
+    purrr,
     readr,
     ggplot2,
     purrr,
