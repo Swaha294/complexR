@@ -32,7 +32,7 @@
 #' # (1, 0)
 #' disc_transform(x0 = 1)
 #'
-#' # Visualize the transformation f(x + iy) = (x^3 - y^2) + i(2*x*y) on all points
+#' # Visualize the transformation f(x + iy) = (x^3 - y^2) + i(2xy) on all points
 #' # of the first 1/6 of the circle of radius 2 centered at (1, 1)
 #' disc_transform(x0 = 1, y0 = 1, x_new = expression(x^3 - y^2),
 #' y_new = expression(2*x*y), theta_min = 0, theta_max = pi/3)

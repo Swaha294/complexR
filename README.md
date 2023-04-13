@@ -15,6 +15,9 @@ transformations on complex numbers:
 - `quad_transform()` performs and visualizes any kind of transformation
   on squares and rectangles
 
+- `disc_transform()` performs and visualizes any kind of transformation
+  on discs
+
 - `plane_to_sphere()` and `sphere_to_plane()` compute stereographic
   projections
 
@@ -32,17 +35,8 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Downloading GitHub repo Swaha294/complexR@HEAD
-
-    ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpx7Tza5/remotes640260d07c6b/Swaha294-complexR-5c3fdf2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpx7Tza5/remotes640260d07c6b/Swaha294-complexR-5c3fdf2/DESCRIPTION’
-    ##   ─  preparing ‘complexR’:
-    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-    ##   ─  checking for LF line-endings in source and make files and shell scripts
-    ##   ─  checking for empty or unneeded directories
-    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
-    ##      
-    ## 
+    ## Skipping install of 'complexR' from a github remote, the SHA1 (57acd5ae) has not changed since last install.
+    ##   Use `force = TRUE` to force installation
 
 ## Usage
 
@@ -61,16 +55,17 @@ circle_transform(
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-Visualize the transformation $f(z) = 2x^2 + i(y^2 - x^2)$ on the line
-$y = 3x - 10$
+Visualize the transformation $f(x + iy) = (x^3 - y^2) + i(2xy)$ on the
+disc $|z| < 1, \theta \in [0, \pi/3]$
 
 ``` r
-line_transform(
-  m = 2, 
-  c = -10,
-  x_new = expression(x^2), 
-  y_new = expression(y^2 - x^2),
-  annotations = c(complex(real = 0, imaginary = -10))
+disc_transform(
+  x0 = 1, 
+  y0 = 1, 
+  x_new = expression(x^3 - y^2),
+  y_new = expression(2*x*y), 
+  theta_min = 0, 
+  theta_max = pi/3
   )
 ```
 

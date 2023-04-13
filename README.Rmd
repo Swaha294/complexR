@@ -16,6 +16,8 @@ circles
 - `quad_transform()` performs and visualizes any kind of transformation on 
 squares and rectangles
 
+- `disc_transform()` performs and visualizes any kind of transformation on discs
+
 - `plane_to_sphere()` and `sphere_to_plane()` compute stereographic projections
 
 - `st_sphere_plot()` and `st_plane_plot()` visualize them.
@@ -47,15 +49,17 @@ circle_transform(
   )
 ```
 
-Visualize the transformation $f(z) = 2x^2 + i(y^2 - x^2)$ on the line $y = 3x - 10$
+Visualize the transformation $f(x + iy) = (x^3 - y^2) + i(2xy)$ on the disc 
+$|z| < 1, \theta \in [0, \pi/3]$ 
 
 ```{r}
-line_transform(
-  m = 2, 
-  c = -10,
-  x_new = expression(x^2), 
-  y_new = expression(y^2 - x^2),
-  annotations = c(complex(real = 0, imaginary = -10))
+disc_transform(
+  x0 = 1, 
+  y0 = 1, 
+  x_new = expression(x^3 - y^2),
+  y_new = expression(2*x*y), 
+  theta_min = 0, 
+  theta_max = pi/3
   )
 ```
 
