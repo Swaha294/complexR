@@ -27,7 +27,7 @@ st_plane_plot <- function(x, y, z) {
   b = Im(c)
 
   xy = ggplot() +
-    geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
+    ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
     coord_fixed() +
     theme_bw() +
     labs(
@@ -40,7 +40,7 @@ st_plane_plot <- function(x, y, z) {
     geom_vline(xintercept = 0, linetype = "dashed")
 
   yz = ggplot() +
-    geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
+    ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
     coord_fixed() +
     theme_bw() +
     labs(
@@ -53,7 +53,7 @@ st_plane_plot <- function(x, y, z) {
     geom_vline(xintercept = 0, linetype = "dashed")
 
   zx = ggplot() +
-    geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
+    ggforce::geom_circle(aes(x0 = 0, y0 = 0, r = 1)) +
     coord_fixed() +
     theme_bw() +
     labs(

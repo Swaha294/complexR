@@ -9,7 +9,7 @@ line_transform(
   c = 0,
   x_new = expression(x^2 - y^2),
   y_new = expression(2 * x * y),
-  xintercept = 1,
+  x_intercept = 1,
   annotations = NULL
 )
 }
@@ -26,8 +26,11 @@ default set to \eqn{x^2 - y^2} corresponding to the \eqn{z^2} transformation.}
 \item{y_new}{An expression. The imaginary part of the complex transformation
 with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.}
 
-\item{xinterecept}{A numeric vector. The \eqn{x}-intercept of the line when
+\item{x_intercept}{A numeric vector. The \eqn{x}-intercept of the line when
 the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.}
+
+\item{annotations}{A list of complex numbers. An optional list of complex numbers
+you want to visualize.}
 }
 \value{
 A visualization with the domain and the image obtained from the

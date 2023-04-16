@@ -7,9 +7,9 @@
 polar_to_cart(r, theta)
 }
 \arguments{
-\item{real}{A numeric vector, the radius of the complex number in polar form}
+\item{r}{A numeric vector, the radius of the complex number in polar form}
 
-\item{imaginary}{A numeric vector, the angle of the complex number in polar form, between
+\item{theta}{A numeric vector, the angle of the complex number in polar form, between
 0 and 2pi.}
 }
 \value{

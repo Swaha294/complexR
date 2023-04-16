@@ -8,8 +8,10 @@
 #' default set to \eqn{x^2 - y^2} corresponding to the \eqn{z^2} transformation.
 #' @param y_new An expression. The imaginary part of the complex transformation
 #' with default set to \eqn{2xy} corresponding to the \eqn{z^2} transformation.
-#' @param xinterecept A numeric vector. The \eqn{x}-intercept of the line when
+#' @param x_intercept A numeric vector. The \eqn{x}-intercept of the line when
 #' the line is parallel to the \eqn{y}-axis. Default value set to \eqn{1}.
+#' @param annotations A list of complex numbers. An optional list of complex numbers
+#' you want to visualize.
 #'
 #' @return A visualization with the domain and the image obtained from the
 #' transformation on all points of the domain.
@@ -28,12 +30,12 @@
 
 # write function for transformation of any line
 line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
-                           y_new = expression(2*x*y), xintercept = 1,
+                           y_new = expression(2*x*y), x_intercept = 1,
                            annotations = NULL) {
 
-  if (!is.numeric(m) | !is.numeric(c) & abs(m) != Inf | !is.numeric(xintercept)) {
+  if (!is.numeric(m) | !is.numeric(c) & abs(m) != Inf | !is.numeric(x_intercept)) {
     # checking that m and c are numbers
-    stop("Check input: m, c, and xintercept should should be numbers", call. = FALSE)
+    stop("Check input: m, c, and x_intercept should should be numbers", call. = FALSE)
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
     # checking that x_new and y_new are expressions
     stop("Check input: x_new and y_new should be objects of class 'expression'", call. = FALSE)
@@ -45,22 +47,22 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
     # checking whether slope m is infinity
     if (abs(m) == Inf) {
 
-      # setting all x to xintercept
-      my_x = rep(xintercept, 50000)
+      # setting all x to x_intercept
+      my_x = rep(x_intercept, 50000)
       # getting all y
-      my_y = runif(50000, -100, 100)
+      my_y = stats::runif(50000, -100, 100)
 
     } else if (m == 0) {
 
       # setting all y to c for horizontal line for m = 0
       my_y = rep(c, 50000)
       # getting all x
-      my_x = runif(50000, -100, 100)
+      my_x = stats::runif(50000, -100, 100)
 
     } else {
 
       # getting all y
-      my_y = runif(50000, c - 100, c + 100)
+      my_y = stats::runif(50000, c - 100, c + 100)
       # getting all x
       my_x = (my_y - c) * m
 
@@ -103,7 +105,7 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
       if (abs(m) == Inf) {
 
         n = my_points %>%
-          dplyr::filter(x != xintercept) %>%
+          dplyr::filter(x != x_intercept) %>%
           nrow()
 
         if (n != 0) {

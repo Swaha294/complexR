@@ -1,7 +1,7 @@
 #' Convert complex polar coordinates to Cartesian coordinates
 #'
-#' @param real A numeric vector, the radius of the complex number in polar form
-#' @param imaginary A numeric vector, the angle of the complex number in polar form, between
+#' @param r A numeric vector, the radius of the complex number in polar form
+#' @param theta A numeric vector, the angle of the complex number in polar form, between
 #' 0 and 2pi.
 #'
 #' @return A list with two elements, `x` and `y`, which correspond to the Cartesian
