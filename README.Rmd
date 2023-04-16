@@ -43,7 +43,7 @@ devtools::install_github("Swaha294/complexR")
 
 Visualize the transformation $f(z) = 2xy + iy^2$ on the unit circle centered at $(1, 0)$
 
-```{r}
+```{r, warning = FALSE}
 library(complexR)
 circle_transform(
   x0 = 1, 

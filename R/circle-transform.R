@@ -163,7 +163,7 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         ) +
         ggrepel::geom_label_repel(
           data = my_points,
-          mapping = aes(label = my_points$exp)
+          mapping = aes(label = exp)
         )
 
     }
@@ -203,7 +203,7 @@ circle_transform <- function(r = 1, x0 = 0, y0 = 0, x_new = expression(x^2 - y^2
         ) +
         ggrepel::geom_label_repel(
           data = my_points,
-          mapping = aes(label = my_points$exp_f)
+          mapping = aes(label = exp_f)
         )
 
     }
