@@ -4,6 +4,10 @@ output: github_document
 
 # complexR
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 ## Overview
 
 `complexR` is a tool for easily computing and visualizing transformations on 
