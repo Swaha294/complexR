@@ -1,6 +1,11 @@
 
 # complexR
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 ## Overview
 
 `complexR` is a tool for easily computing and visualizing
@@ -35,8 +40,17 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Skipping install of 'complexR' from a github remote, the SHA1 (57acd5ae) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo Swaha294/complexR@HEAD
+
+    ## 
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpXq1x54/remotescb294f96c60e/Swaha294-complexR-343a51d/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpXq1x54/remotescb294f96c60e/Swaha294-complexR-343a51d/DESCRIPTION’ (387ms)
+    ##   ─  preparing ‘complexR’:
+    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
+    ##      
+    ## 
 
 ## Usage
 
@@ -52,6 +66,12 @@ circle_transform(
   annotations = c(complex(real = 2, imaginary = 0), complex(real = 1, imaginary = 1))
   )
 ```
+
+    ## Warning: Use of `my_points$exp` is discouraged.
+    ## ℹ Use `exp` instead.
+
+    ## Warning: Use of `my_points$exp_f` is discouraged.
+    ## ℹ Use `exp_f` instead.
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
