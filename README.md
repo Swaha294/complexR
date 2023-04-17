@@ -40,8 +40,17 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Skipping install of 'complexR' from a github remote, the SHA1 (fbbb08a0) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo Swaha294/complexR@HEAD
+
+    ## 
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp685VfX/remotes185702ab73e9e/Swaha294-complexR-6a97e16/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp685VfX/remotes185702ab73e9e/Swaha294-complexR-6a97e16/DESCRIPTION’ (349ms)
+    ##   ─  preparing ‘complexR’:
+    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
+    ##      
+    ## 
 
 ## Usage
 
@@ -75,3 +84,12 @@ disc_transform(
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+Visualize the stereographic projection of z = 2 + 3i in $\mathbb{C}$
+onto the Riemann sphere $\mathbb{C}^*$
+
+``` r
+st_sphere_plot(2, 3)
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->

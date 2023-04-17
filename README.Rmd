@@ -67,4 +67,11 @@ disc_transform(
   )
 ```
 
+Visualize the stereographic projection of z = 2 + 3i in $\mathbb{C}$ onto the Riemann
+sphere $\mathbb{C}^*$
+
+```{r}
+st_sphere_plot(2, 3)
+```
+
 
