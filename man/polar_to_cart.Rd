@@ -10,7 +10,7 @@ polar_to_cart(r, theta)
 \item{r}{A numeric vector, the radius of the complex number in polar form}
 
 \item{theta}{A numeric vector, the angle of the complex number in polar form, between
-0 and 2pi.}
+-pi and pi.}
 }
 \value{
 A list with two elements, \code{x} and \code{y}, which correspond to the Cartesian

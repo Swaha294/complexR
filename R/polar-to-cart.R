@@ -2,7 +2,7 @@
 #'
 #' @param r A numeric vector, the radius of the complex number in polar form
 #' @param theta A numeric vector, the angle of the complex number in polar form, between
-#' 0 and 2pi.
+#' -pi and pi.
 #'
 #' @return A list with two elements, `x` and `y`, which correspond to the Cartesian
 #' components of the complex number given in polar coordinates.
@@ -19,7 +19,10 @@
 
 polar_to_cart <- function(r, theta) {
 
-  if (0 >= theta | 2*pi < theta) {
+  if (!is.numeric(r) | !is.numeric(theta)) {
+    # checking that r and theta are numbers
+    stop("Check input: r and theta should be numbers", call. = FALSE)
+  } else if (0 > theta | 2*pi < theta) {
     # checking that theta is between 0 and 2pi
     stop(paste("Check input: theta should be between", 0, "and", 2*pi), call. = FALSE)
   } else if (r < 0) {
