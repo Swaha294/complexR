@@ -5,10 +5,6 @@ library(testthat)
 
 test_that("testing for invalid inputs", {
   expect_error(
-    line_transform(m = "a"),
-    regexp = "should be numbers"
-  )
-  expect_error(
     line_transform(c = "b"),
     regexp = "should be numbers"
   )

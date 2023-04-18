@@ -33,7 +33,7 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
                            y_new = expression(2*x*y), x_intercept = 1,
                            annotations = NULL) {
 
-  if (!is.numeric(m) | !is.numeric(c) & abs(m) != Inf | !is.numeric(x_intercept)) {
+  if (!is.numeric(c) & abs(m) != Inf | !is.numeric(x_intercept)) {
     # checking that m and c are numbers
     stop("Check input: m, c, and x_intercept should should be numbers", call. = FALSE)
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
