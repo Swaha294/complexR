@@ -24,9 +24,9 @@ Visualize stereographic projections from \eqn{\mathbb{C}^*} to \eqn{\mathbb{C}}
 
 library(complexR)
 
-# Visualize the stereographic projection of the point (1/3, 1/3, 1/3) on the
+# Visualize the stereographic projection of the point (1/3, 2/3, 2/3) on the
 # complex plane
 
-st_plane_plot(1/3, 1/3, 1/3)
+st_plane_plot(1/3, 2/3, 2/3)
 
 }

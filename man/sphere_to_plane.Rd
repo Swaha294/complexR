@@ -23,8 +23,8 @@ Perform a stereographic projection to project a point on the Riemann sphere to t
 
 library(complexR)
 
-# Convert the point (0.5, 0.5, 0.5) on the Riemann sphere to a point on the complex plane
+# Convert the point (1/3, 2/3, 2/3) on the Riemann sphere to a point on the complex plane
 
-sphere_to_plane(0.5, 0.5, 0.5)
+sphere_to_plane(1/3, 2/3, 2/3)
 
 }

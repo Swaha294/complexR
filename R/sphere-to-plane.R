@@ -10,9 +10,9 @@
 #'
 #' library(complexR)
 #'
-#' # Convert the point (0.5, 0.5, 0.5) on the Riemann sphere to a point on the complex plane
+#' # Convert the point (1/3, 2/3, 2/3) on the Riemann sphere to a point on the complex plane
 #'
-#' sphere_to_plane(0.5, 0.5, 0.5)
+#' sphere_to_plane(1/3, 2/3, 2/3)
 #'
 #' @export
 
@@ -20,14 +20,12 @@
 sphere_to_plane <- function(x, y, z) {
 
   if (!is.numeric(x) | !is.numeric(y) | !is.numeric(z)) {
-
     # checking that x, y, and z are numbers
-    stop("Inputs should be numeric", call. = FALSE)
-
+    stop("Check input: x, y, z should be numeric", call. = FALSE)
   }  else {
 
     nums = c(x, y, z)
-    nums = MASS::fractions(nums)
+    nums = MASS::as.fractions(nums)
 
     if (x == 0 & y == 0 & z == 1) {
       # setting w to infinity if P is the north pole
@@ -35,7 +33,7 @@ sphere_to_plane <- function(x, y, z) {
 
       # returning w
       return(w)
-    } else if (nums[1]^2 + nums[2]^2 + nums[3]^2 <= 1) {
+    } else if (as.integer(nums[1]^2 + nums[2]^2 + nums[3]^2) == 1L) {
       # calculating real part of w
       u = x / (1 - z)
       # calculating imaginary part of w
@@ -47,7 +45,7 @@ sphere_to_plane <- function(x, y, z) {
       return(w)
     } else {
       # checking that given point is on the unit sphere
-      stop("Given point is not within the unit sphere", call. = FALSE)
+      stop("Given point is not on the unit sphere", call. = FALSE)
     }
 
   }
