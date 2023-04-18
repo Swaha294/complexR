@@ -27,6 +27,9 @@ quad_surface_transform <- function(h = 1, v = 1, x0 = 0, y0 = 0, x_new = express
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
     # checking that x_new and y_new are expressions
     stop("Check input: x_new and y_new should be objects of class expression", call. = FALSE)
+  } else if (h <= 0 | v <= 0) {
+    # checking that h and v are greater than 0
+    stop("Check input: h and v should be greater than 0", call. = FALSE)
   } else {
 
     # creating square or rectangle
