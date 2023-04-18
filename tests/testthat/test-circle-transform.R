@@ -25,7 +25,7 @@ test_that("check for invalid inputs", {
     regexp = "should be objects of class 'expression'"
   )
   expect_error(
-    circle_transform(annotations = c("a", 2, 3)),
+    circle_transform(annotations = c(1, 2, 3)),
     regexp = "should be a list of complex numbers"
   )
 })

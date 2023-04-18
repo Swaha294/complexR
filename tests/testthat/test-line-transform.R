@@ -17,7 +17,7 @@ test_that("testing for invalid inputs", {
     regexp = "should be numbers"
   )
   expect_error(
-    line_transform(annotations = c("a", 2, 3)),
+    line_transform(annotations = c(1, 2, 3)),
     regexp = "should be a list of complex numbers"
   )
 })

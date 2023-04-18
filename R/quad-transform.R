@@ -32,7 +32,7 @@ quad_transform <- function(h = 1, v = 1, x0 = 0, y0 = 0, x_new = expression(x^2 
   } else if (h <= 0 | v <= 0) {
     # checking that h and v are positive numbers
     stop("Check input: h and v should be greater than 0", call. = FALSE)
-  } else if (!is.null(annotations) & is.na(as.complex(annotations))) {
+  } else if (!is.null(annotations) & !is.complex(annotations)) {
     # checking that annotations is a list of complex numbers
     stop("Check input: annotations should be a list of complex numbers", call. = FALSE)
   } else {

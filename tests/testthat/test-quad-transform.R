@@ -22,7 +22,7 @@ test_that(
       regexp = "of class expression"
     )
     expect_error(
-      quad_transform(annotations = c("a", 2, 3)),
+      quad_transform(annotations = c(1, 2, 3)),
       regexp = "should be a list of complex numbers"
     )
   }

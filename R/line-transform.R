@@ -39,7 +39,7 @@ line_transform <- function(m = 1, c = 0, x_new = expression(x^2 - y^2),
   } else if (!is.expression(x_new) | !is.expression(y_new)) {
     # checking that x_new and y_new are expressions
     stop("Check input: x_new and y_new should be objects of class 'expression'", call. = FALSE)
-  } else if (!is.null(annotations) & is.na(as.complex(annotations))) {
+  } else if (!is.null(annotations) & !is.complex(annotations)) {
     # checking that annotations is a list of complex numbers
     stop("Check input: annotations should be a list of complex numbers", call. = FALSE)
   } else {
