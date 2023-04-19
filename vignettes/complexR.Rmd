@@ -2,7 +2,7 @@
 title: "Introduction to complexR"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Using the complexR package}
+  %\VignetteIndexEntry{Introduction to complexR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,3 +17,68 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(complexR)
 ```
+
+
+When working with the `complexR` package:
+
+* if you are visualizing a transformation, you must:
+
+  + know what domain you are dealing with
+  
+  + what the real and imaginary elements of your transformation are, i.e., get a 
+  transformation function $f(z)$ of the form $f(z) = u(z) + i \cdot v(z)$
+  
+* if you are computing or visualizing a stereographic projection, you must:
+
+  + know whether you are going from the plane $\mathbb{C}$ to the Riemann sphere
+  $\mathbb{C}^*$ or vice versa
+  
+* if you are computing transformations between polar and Cartesian coordinates,
+you must:
+
+  + know what your coordinates are in one form to compute the other form
+
+## Transformations betweeen Coordinates
+
+`complexR` provides functions to:
+
+* transform polar to Cartesian coordinates using `polar_to_cart()`
+
+* transform Cartesian to polar coordinates using `cart_to_polar()`
+
+## Visualizing Transformations
+
+`complexR` provides functions to visualize transformations on the following domains:
+
+* circles using `circle_transform()`
+
+* discs using `disc_transform()`
+
+* squares and rectangles using `quad_transform()`
+
+* squares and rectangles surfaces using `quad_surface_transform()`
+
+* lines using `line_transform()`
+
+
+## Stereographic Projections
+
+### Computing Stereographic Projections
+
+`complexR` provides functions for:
+
+* computing projections from the complex plane to the Riemann sphere using 
+`plane_to_sphere()`
+
+* computing projections from the Riemann sphere to the complex plane using 
+`sphere_to_plane()`
+
+### Visualizing Stereographic Projections
+
+`complexR` provides functions for:
+
+* visualizing projections from the complex plane to the Riemann sphere using 
+`st_sphere_plot()`
+
+* visualizing projections from the Riemann sphere to the complex plane using 
+`st_plane_plot()`

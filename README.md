@@ -3,6 +3,10 @@
 
 <!-- badges: start -->
 
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
 [![R-CMD-check](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -42,13 +46,25 @@ devtools::install_github("Swaha294/complexR")
 
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
+    ## ps       (1.7.4 -> 1.7.5) [CRAN]
+    ## processx (3.8.0 -> 3.8.1) [CRAN]
+
+    ## Installing 2 packages: ps, processx
+
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp685VfX/remotes185702ab73e9e/Swaha294-complexR-6a97e16/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmp685VfX/remotes185702ab73e9e/Swaha294-complexR-6a97e16/DESCRIPTION’ (349ms)
+    ##   There are binary versions available but the source versions are later:
+    ##          binary source needs_compilation
+    ## ps        1.7.4  1.7.5              TRUE
+    ## processx  3.8.0  3.8.1              TRUE
+
+    ## installing the source packages 'ps', 'processx'
+
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpaHP8BX/remotesb5a74ffdc8ba/Swaha294-complexR-299a2fa/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpaHP8BX/remotesb5a74ffdc8ba/Swaha294-complexR-299a2fa/DESCRIPTION’ (401ms)
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
     ##   ─  checking for LF line-endings in source and make files and shell scripts
     ##   ─  checking for empty or unneeded directories
-    ##   ─  building ‘complexR_0.0.0.9000.tar.gz’
+    ##   ─  building ‘complexR_1.0.0.tar.gz’
     ##      
     ## 
 
