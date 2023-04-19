@@ -38,7 +38,7 @@ you must:
 
   + know what your coordinates are in one form to compute the other form
 
-## Transformations betweeen Coordinates
+## Transformations between Coordinates
 
 `complexR` provides functions to:
 
