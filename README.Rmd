@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-# complexR
+# complexR <img src="R/sticker/hex_complexR.png" align="right" height=140/>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)

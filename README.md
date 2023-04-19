@@ -1,5 +1,5 @@
 
-# complexR
+# complexR <img src="R/sticker/hex_complexR.png" align="right" height=140/>
 
 <!-- badges: start -->
 
@@ -44,29 +44,8 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Downloading GitHub repo Swaha294/complexR@HEAD
-
-    ## ps       (1.7.4 -> 1.7.5) [CRAN]
-    ## processx (3.8.0 -> 3.8.1) [CRAN]
-
-    ## Installing 2 packages: ps, processx
-
-    ## 
-    ##   There are binary versions available but the source versions are later:
-    ##          binary source needs_compilation
-    ## ps        1.7.4  1.7.5              TRUE
-    ## processx  3.8.0  3.8.1              TRUE
-
-    ## installing the source packages 'ps', 'processx'
-
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpaHP8BX/remotesb5a74ffdc8ba/Swaha294-complexR-299a2fa/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpaHP8BX/remotesb5a74ffdc8ba/Swaha294-complexR-299a2fa/DESCRIPTION’ (401ms)
-    ##   ─  preparing ‘complexR’:
-    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-    ##   ─  checking for LF line-endings in source and make files and shell scripts
-    ##   ─  checking for empty or unneeded directories
-    ##   ─  building ‘complexR_1.0.0.tar.gz’
-    ##      
-    ## 
+    ## Skipping install of 'complexR' from a github remote, the SHA1 (b04d72dc) has not changed since last install.
+    ##   Use `force = TRUE` to force installation
 
 ## Usage
 
