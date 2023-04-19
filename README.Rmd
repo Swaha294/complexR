@@ -6,7 +6,7 @@ output: github_document
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
+[![CRAN status](https://www.r-pkg.org/badges/version/complexR)](https://CRAN.R-project.org/package=complexR)
 [![R-CMD-check](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 

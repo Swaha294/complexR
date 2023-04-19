@@ -6,7 +6,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/ipl)](https://CRAN.R-project.org/package=ipl)
+status](https://www.r-pkg.org/badges/version/complexR)](https://CRAN.R-project.org/package=complexR)
 [![R-CMD-check](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Swaha294/complexR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -47,10 +47,10 @@ devtools::install_github("Swaha294/complexR")
     ## Downloading GitHub repo Swaha294/complexR@HEAD
 
     ## 
-    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpBt0r5d/remotesdec4521de7cb/Swaha294-complexR-fca8c15/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpBt0r5d/remotesdec4521de7cb/Swaha294-complexR-fca8c15/DESCRIPTION’ (542ms)
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpy8jJo1/remotesf58d78bf1442/Swaha294-complexR-d60dad2/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/Rtmpy8jJo1/remotesf58d78bf1442/Swaha294-complexR-d60dad2/DESCRIPTION’ (341ms)
     ##   ─  preparing ‘complexR’:
     ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-    ##            ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for LF line-endings in source and make files and shell scripts
     ##   ─  checking for empty or unneeded directories
     ##   ─  building ‘complexR_1.0.0.tar.gz’
     ##      
