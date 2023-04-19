@@ -44,8 +44,17 @@ Use this code to download the development version of `complexR`.
 devtools::install_github("Swaha294/complexR")
 ```
 
-    ## Skipping install of 'complexR' from a github remote, the SHA1 (b04d72dc) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
+    ## Downloading GitHub repo Swaha294/complexR@HEAD
+
+    ## 
+    ##      checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpBt0r5d/remotesdec4521de7cb/Swaha294-complexR-fca8c15/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/0p/hkwpsbqj047d4nq34kz3_wdr0000gn/T/RtmpBt0r5d/remotesdec4521de7cb/Swaha294-complexR-fca8c15/DESCRIPTION’ (542ms)
+    ##   ─  preparing ‘complexR’:
+    ##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+    ##            ─  checking for LF line-endings in source and make files and shell scripts
+    ##   ─  checking for empty or unneeded directories
+    ##   ─  building ‘complexR_1.0.0.tar.gz’
+    ##      
+    ## 
 
 ## Usage
 

@@ -3,7 +3,7 @@ library(magick)
 library(dplyr)
 library(showtext)
 
-font_add_google("Montserrat", db_cache = FALSE)
+font_add_google("Montserrat", db_cache = FALSE, bold.wt = 1100)
 
 img <- image_read("R/sticker/hex-complexR.jpg")
 
