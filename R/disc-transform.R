@@ -73,19 +73,14 @@ disc_transform <- function(r_inner = 0, r_outer = 1, x0 = 0, y0 = 0, x_new = exp
   } else {
 
     # creating list with theta between theta_min and theta_max
-    thetas = stats::runif(300, theta_min, theta_max)
+    thetas = stats::runif(50000, theta_min, theta_max)
 
     # creating list with r between r_inner and r_outer
-    rs = stats::runif(400, r_inner, r_outer)
+    rs = stats::runif(50000, r_inner, r_outer)
 
     # creating data set for disc centered at (0, 0)
-    my_disc = purrr::map2_df(rs, thetas[1], polar_to_cart)
 
-    for (i in 2:length(thetas)) {
-
-      my_disc = rbind(my_disc, purrr::map2_df(rs, thetas[i], polar_to_cart))
-
-    }
+    my_disc = purrr::map2_df(rs, thetas, polar_to_cart)
 
     # adjusting for center at (x0, y0)
     my_disc = my_disc %>%
